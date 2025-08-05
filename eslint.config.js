@@ -1,45 +1,28 @@
-import js from '@eslint/js';
+import eslint from '@eslint/js';
 import tseslint from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
+import tsparser from '@typescript-eslint/parser';
 
 export default [
-  js.configs.recommended,
+  eslint.configs.recommended,
   {
-    files: ['src/**/*.ts', 'tests/**/*.ts'],
+    files: ['**/*.ts', '**/*.js'],
     languageOptions: {
-      parser: tsParser,
+      parser: tsparser,
       parserOptions: {
-        ecmaVersion: 'latest',
+        ecmaVersion: 2023,
         sourceType: 'module',
-        project: './tsconfig.json'
       },
-      globals: {
-        console: 'readonly',
-        Buffer: 'readonly',
-        URL: 'readonly',
-        URLSearchParams: 'readonly',
-        process: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly'
-      }
     },
     plugins: {
-      '@typescript-eslint': tseslint
+      '@typescript-eslint': tseslint,
     },
     rules: {
-      ...tseslint.configs.recommended.rules,
-      '@typescript-eslint/no-unused-vars': ['warn', { 
-        argsIgnorePattern: '^_',
-        varsIgnorePattern: '^_'
-      }],
-      '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
-      'no-useless-escape': 'off',
-      'no-undef': 'off' // TypeScript handles this better
-    }
+      'no-console': 'off', // Allow console for build scripts
+    },
   },
   {
-    ignores: ['dist/**', 'coverage/**', 'node_modules/**']
-  }
+    ignores: ['node_modules/**', 'dist/**', 'build/**', 'pages-dist/**', 'content/**'],
+  },
 ];

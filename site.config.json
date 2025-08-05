@@ -2,11 +2,11 @@
   "site": {
     "title": "My AgentStatic Site",
     "description": "A beautiful static site powered by AgentStatic - AI-native content management with TypeScript partials",
-    "url": "https://{{GITHUB_USERNAME}}.github.io/{{REPOSITORY_NAME}}",
+    "url": "https://conorluddy.github.io/GraplaWeb",
     "author": {
-      "name": "{{GITHUB_USERNAME}}",
-      "email": "{{GITHUB_USERNAME}}@users.noreply.github.com",
-      "url": "https://github.com/{{GITHUB_USERNAME}}"
+      "name": "conorluddy",
+      "email": "conorluddy@users.noreply.github.com",
+      "url": "https://github.com/conorluddy"
     },
     "lang": "en",
     "timezone": "UTC",
@@ -14,7 +14,7 @@
   },
   "build": {
     "outputDir": "pages-dist",
-    "publicPath": "/{{REPOSITORY_NAME}}/",
+    "publicPath": "/GraplaWeb/",
     "optimizeImages": true,
     "generateSitemap": true,
     "generateRobotsTxt": true,
@@ -69,7 +69,7 @@
     "target": "github-pages",
     "branch": "gh-pages",
     "cname": null,
-    "baseUrl": "/{{REPOSITORY_NAME}}/"
+    "baseUrl": "/GraplaWeb/"
   },
   "templates": {
     "partials": {

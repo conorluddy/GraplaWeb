@@ -1,21 +1,13 @@
 /**
- * AgentStatic - AI-Native Static Site Generator
- *
- * Main entry point for the AgentStatic library providing TypeScript-first
- * templating with Zod validation and MCP integration.
+ * Custom partials and components for your AgentStatic site
+ * 
+ * This directory is for TypeScript-first development of custom partials,
+ * components, and site-specific functionality.
  */
 
-// Core functionality exports
-export * from './core/index.js';
+// Example custom partial (you can delete this)
+export const siteName = 'GraplaWeb';
 
-// Type definitions
-export * from './types/index.js';
-
-// Partial system exports
-export * from './partials/index.js';
-
-// Helper utilities
-export * from './helpers/index.js';
-
-// MCP integration (optional - only available when MCP is configured)
-export * from './mcp/index.js';
+// TODO: Add your custom partials and components here
+// Example:
+// export const customHero: AgentPartial<{title: string}> = { ... }
